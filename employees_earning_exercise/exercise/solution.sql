@@ -1,3 +1,3 @@
 -- BEGIN
-SELECT Employee.Name FROM  Employee JOIN Employee AS Manager ON (Employee.ManagerId = Manager.Id ) WHERE Employee.Salary > Manager.Salary;
+SELECT employees.name FROM  employees JOIN employees AS manager ON (employees.manager_id = manager.id ) WHERE employees.salary > manager.salary;
 -- END
