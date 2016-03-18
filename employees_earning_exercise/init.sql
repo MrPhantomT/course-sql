@@ -5,8 +5,6 @@ CREATE TABLE employees (
   manager_id integer
 );
 
-AlTER TABLE employees OWNER TO nobody;
-
 INSERT INTO employees (id, name, salary, manager_id) VALUES
 (1, 'Joe', 70000, 3),
 (2, 'Henry', 80000, 4),
