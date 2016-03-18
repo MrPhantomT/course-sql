@@ -10,7 +10,7 @@ RUN sed -i -e '1iCREATE OR REPLACE FUNCTION solution() RETURNS table(name varcha
       echo '$$ LANGUAGE SQL;' >> /root/solution.sql;
 
 RUN /etc/init.d/postgresql start && \
-      sudo -u postgres createuser nobody -D -l -R -S -w && \
+      sudo -u postgres createuser nobody -d -l && \
       sudo -u postgres createdb -O nobody nobody && \
       sudo -u nobody psql nobody < /root/init.sql && \
       sudo -u postgres psql nobody -c "REVOKE SELECT ON pg_proc FROM public;" && \
